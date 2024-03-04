@@ -1,0 +1,263 @@
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$border: solid white;
+$background-linear: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+$search-box-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+$hover-box-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(images/pexels-philippe-donn.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#appbar {
+    width: 100%;
+    height: 50px;
+    background: $background-linear;
+    border: 3px $border;
+    border-radius: 10px;
+    @include flex-center();
+}
+
+#weather {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+        background: #444;
+    }
+
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+
+#timer-stopwatch {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+        background: #444;
+    }
+
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+
+#calculator {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+        background: #444;
+    }
+
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+
+#clock {
+    color: white;
+    right: 10%;
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#date {
+    color: white;
+    right: 70%;
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body-greet {
+    width: 100%;
+    height: calc(100vh - 50px);
+    color: white;
+}
+
+.greet {
+    color: white;
+}
+
+.greeting {
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+}
+
+#search-button {
+    font-size: 20px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 200px;
+    height: 50px;
+    border: 2px solid white;
+    background: $search-box-background;
+    color: white;
+    border-radius: 50px;
+    &:hover {
+        background: white;
+        color: black;
+    }
+    &:active {
+        background: white;
+        color: green;
+    }
+    transition: all 0.4s ease;
+}
+@media only screen and (min-width: 768px) {
+    #search-box {
+        transition: all 0.6s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 25px;
+        background: $search-box-background;
+        color: white;
+    
+        &:hover {
+            background: $hover-box-background;
+        }
+    
+        ::placeholder {
+            color: #444;
+        }
+        padding-left: 40px;
+    }
+    .search-glass {
+        position: absolute;
+        top: 50%;
+        left: 26.5%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #search-box {
+        transition: all 0.6s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 25px;
+        background: $search-box-background;
+        color: white;
+        padding: none;
+    
+        &:hover {
+            background: $hover-box-background;
+        }
+    
+        ::placeholder {
+            color: #444;
+        }
+        padding-left: 40px;
+    }
+    .search-glass {
+        display: none;
+    }
+    #date {
+        color: white;
+        right: 67%;
+        position: absolute;
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+@media only screen and (min-width: 768px ) and (max-width: 1024px) {
+    #search-box {
+        transition: all 0.6s ease;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 25px;
+        background: $search-box-background;
+        color: white;
+    
+        &:hover {
+            background: $hover-box-background;
+        }
+    
+        ::placeholder {
+            color: #444;
+        }
+        padding-left: 40px;
+    }
+    .search-glass {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (min-height: 800px) {
+    .search-glass{
+        position: absolute;
+        left: 24.5%;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    *  {
+        font-size: 14px;
+    }
+    #date {
+        position: absolute;
+        left: 1.5%;
+        top: 1.5%;
+    }
+    .greeting {
+        font-size: 100px;
+    }
+}

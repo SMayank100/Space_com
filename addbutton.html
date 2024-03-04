@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addbutton.css"/>
+</head>
+<body>
+    <form class="container">
+        <div class="heading"><h1>Add Timer</h1></div>
+        <input type="number" id="input-hours" placeholder="00" required>
+        <div class="firstcolon">:</div>
+        <input type="number" id="input-minutes" placeholder="00" required>
+        <div class="secondcolon">:</div>
+        <input type="number" id="input-seconds" placeholder="00" required>
+        <div class="btns">
+            <button id="ok-button" type="submit" onclick="okbuttonfunctions()">OK</button>
+        </div>
+    </form>
+    <script src="scripttimer.js"></script>
+</body>
+</html>

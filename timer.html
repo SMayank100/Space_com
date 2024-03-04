@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/startup.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="timer.css" />
+</head>
+
+<body class="body">
+    <div id="overlay"></div>
+    <div id="appbar">
+        <div id="date"><strong id=date></strong></div>
+        <button id="weather">
+            <img src="images/sun.png" />
+        </button>
+        <button id="home">
+            <img src="images/home.png" />
+        </button>
+        <button id="calculator">
+            <img src="images/calculator.png" />
+        </button>
+        <div id="clock"><strong id="time">00:00:00</strong></div>
+    </div>
+    <div class="real-body">
+        <nav class="topbar">
+            <a href="stopwatch.html">
+                <button id="stopwatchbutton"><img src="images/bxs-stopwatch.png"></button>
+            </a>
+            <button id="timerbutton"><img src="images/timer-solid-36.png"></button>
+        </nav>
+        <div class="timer-container">
+            <h1 id="displayTime">00:00:00</h1>
+            <div class="btns">
+                <div class="flexstartbtns">
+                    <button id="playpausebutton" class="topbuttons"
+                        onclick="watchStart()"><strong>START</strong></button>
+                    <button id="resetbutton" class="topbuttons" onclick="watchReset()"><strong>RESET</strong></button>
+                    <button id="addbutton" class="topbuttons" onclick="openAddFile()"><strong>+</strong></button>
+                </div>
+                <div class="flexendbtns">
+                    <button id="sec30" class="bottombuttons"><strong>30s</strong></button>
+                    <button id="mins1" class="bottombuttons"><strong>1 Min</strong></button>
+                    <button id="mins5" class="bottombuttons"><strong>5 Min</strong></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripttimer.js"></script>
+</body>
+
+</html>

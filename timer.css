@@ -1,0 +1,336 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(images/pexels-philippe-donn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.topbar{
+    width: 80%;
+    height: 40px;
+    align-self: flex-start;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    border-radius: 2px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+#appbar {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    border: 3px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #weather {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+  #weather:hover {
+    background: #444;
+  }
+  #weather:active {
+    transform: scale(0.96);
+  }
+  
+  #home {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+  #home:hover {
+    background: #444;
+  }
+  #home:active {
+    transform: scale(0.96);
+  }
+  
+  #calculator {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+  #calculator:hover {
+    background: #444;
+  }
+  #calculator:active {
+    transform: scale(0.96);
+  }
+  
+  #clock {
+    color: white;
+    right: 10%;
+    position: absolute;
+    font-size: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  #date {
+    color: white;
+    right: 70%;
+    position: absolute;
+    font-size: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+.real-body {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stopwatchbutton{
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+}
+
+#stopwatchbutton:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+#stopwatchbutton:active{
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+#timerbutton{
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: rgb(0, 119, 255);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+}
+
+#timerbutton:active{
+    background: #777;
+}
+
+.timer-container{
+    border-radius: 20px;
+    border: 2px solid white;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    align-self: center;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#displayTime{
+    text-align: center;
+    font-size: 30px;
+    width: 200px;
+    color: white;
+    align-self: flex-start;
+    justify-self: center;
+    position: absolute;
+    margin-top: 8px;
+    border: 1px solid #666;
+    border-radius: 20px;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    margin-top: 5px;
+    border-radius: 20px;
+    border: 2px solid #666;
+    align-self: flex-end;
+}
+
+#resetbutton{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border: 2px solid white;
+    color: white;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#playpausebutton{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border: 2px solid white;
+    color: white;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#resetbutton:hover{
+    background: white;
+    color: black;
+}
+
+#playpausebutton:hover{
+    color: green;
+}
+
+#resetbutton:active{
+    background: green;
+}
+
+#addbutton{
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border: 2px solid white;
+    color: white;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#addbutton:hover{
+    background: white;
+    color: black;
+}
+
+#addbutton:active{
+    background: green;
+}
+
+#sec30{
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border: 2px solid white;
+    color: white;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#mins1{
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border: 2px solid white;
+    color: white;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#mins5{
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    border: 2px solid white;
+    color: white;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#sec30:hover{
+    background: white;
+    color: black;
+}
+
+#mins1:hover{
+    background: white;
+    color: black;
+}
+
+#mins5:hover{
+    background: white;
+    color: black;
+}
+
+#sec30:active{
+    background: green;
+}
+
+#mins1:active{
+    background: green;
+}
+
+#mins5:active{
+    background: green;
+}
+
+.flexstartbtns{
+    position: fixed;
+    align-self: flex-start;
+}
+
+.flexendbtns{
+    position: fixed;
+    align-self: flex-end;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .timer-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .timer-container {
+    margin-top: 80px;
+  }
+}

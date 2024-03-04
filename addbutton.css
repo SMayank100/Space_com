@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/milkyway.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading{
+    align-self: flex-start;
+    position: fixed;
+    color: white;
+    margin-top: 30px;
+}
+
+.container{
+    width: 400px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 20px solid black;
+    border-radius: 50px;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    border: 2px solid white;
+}
+
+#input-hours{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 100px;
+    height: 30px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#input-hours::placeholder{
+    color: white;
+}
+
+.firstcolon{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 30px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.secondcolon{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 30px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+#input-minutes{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 100px;
+    height: 30px;
+    border-left: none;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#input-minutes::placeholder{
+    color: white;
+}
+
+#input-seconds{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    width: 100px;
+    height: 30px;
+    border-left: none;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#input-seconds::placeholder{
+    color: white;
+}
+
+#ok-button{
+    width: 70px;
+    height: 20px;
+    color: white;
+    background: rgb(5, 5, 14);
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 110px;
+    height: auto;
+    align-self: flex-end;
+    justify-self: center;
+    width: 100%;
+    position: fixed;
+}

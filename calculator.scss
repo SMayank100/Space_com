@@ -1,0 +1,208 @@
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-space() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+$border: solid white;
+$background-linear: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+$search-box-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+$hover-box-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+$hover: rgba(255, 255, 255, 0.3);
+$action-buttons: rgba(255, 255, 255, 0.1);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(images/pexels-philippe-donn.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#appbar {
+    width: 100%;
+    height: 50px;
+    background: $background-linear;
+    border: 3px $border;
+    border-radius: 10px;
+    @include flex-center();
+}
+
+#home {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+        background: #444;
+    }
+
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+
+#timer-stopwatch {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+        background: #444;
+    }
+
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+
+#weather {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+        background: #444;
+    }
+
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+
+#clock {
+    color: white;
+    right: 10%;
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#date {
+    color: white;
+    right: 70%;
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.real-body {
+    width: 100%;
+    height: calc(100% - 50px);
+    background: transparent;
+    @include flex-center();
+}
+
+.container {
+    width: 400px;
+    background: $background-linear;
+    border: 3px $border;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.calculator {
+    width: 100%;
+    height: 100%;
+    font-size: 60px;
+
+    #first-btns, #second-btns, #third-btns, #fourth-btns, #fifth-btns {
+        @include flex-space(); // Use the flex-space mixin for consistent spacing between buttons
+        flex-wrap: wrap; // Allow buttons to wrap to the next line if needed
+
+        #buttons {
+            font-size: 30px;
+            width: 70px;
+            height: 70px;
+            color: white;
+            background: none;
+            transition: all 0.2s ease;
+            border: none;
+            &:hover {
+                background: $hover;
+            }
+            &:active {
+                border-radius: 50%;
+            }
+            margin: 5px;
+        }
+        .action-buttons {
+            font-size: 30px;
+            width: 70px;
+            height: 70px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $action-buttons;
+            transition: all 0.2s ease;
+            border: none;
+            &:hover {
+                background: $hover;
+            }
+            &:active {
+                border-radius: 50%;
+            }
+            margin: 5px;
+        }
+        .getans-button {
+            font-size: 30px;
+            width: 70px;
+            height: 70px;
+            color: white;
+            background: rgba(255, 123, 0, 0.3);
+            transition: all 0.2s ease;
+            border: none;
+            &:hover {
+                background: rgba(255, 123, 0, 0.5);
+            }
+            &:active {
+                border-radius: 50%;
+            }
+            margin: 5px;
+        }
+    }
+}
+
+.container input {
+    background: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 50px;
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 30px;
+    color: white;
+    &::placeholder {
+        align-self: right;
+        color: white;
+    }
+    text-align: right;
+}
+

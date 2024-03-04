@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/startup.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="stylesheet" href="stopwatch.css">
+</head>
+
+<body>
+    <div id="appbar">
+        <div id="date"><strong id=date></strong></div>
+        <button id="weather">
+            <img src="images/sun.png" />
+        </button>
+        <button id="home">
+            <img src="images/home.png" />
+        </button>
+        <button id="calculator">
+            <img src="images/calculator.png" />
+        </button>
+        <div id="clock"><strong id="time">00:00:00</strong></div>
+    </div>
+    <div class="real-body">
+        <nav class="topbar">
+            <button id="stopwatchbutton"><img src="images/bxs-stopwatch.png"></button>
+            <a href="timer.html">
+                <button id="timerbutton"><img src="images/timer-solid-36.png"></button>
+            </a>
+        </nav>
+        <div class="stopwatchcontainer">
+            <h1 id="displayTime">00:00:00.00</h1>
+            <div class="btns">
+                <button id="resetbutton" onclick="watchreset()"><strong>RESET</strong></button>
+                <button id="playpausebutton" onclick="watchstart()"><strong>START</strong></button>
+            </div>
+        </div>
+    </div>
+    <script src="scriptstopwatch.js"></script>
+</body>
+
+</html>

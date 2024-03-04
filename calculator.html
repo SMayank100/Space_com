@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" type="x-icon" href="images/startup.png" />
+    <link rel="stylesheet" href="calculator.css" />
+</head>
+
+<body>
+    <div id="appbar">
+        <div id="date"><strong id=date></strong></div>
+        <button id="weather">
+            <img src="images/sun.png" />
+        </button>
+        <button id="timer-stopwatch">
+            <img src="images/clock.svg" />
+        </button>
+        <button id="home">
+            <img src="images/home.png" />
+        </button>
+        <div id="clock"><strong id="time">00:00:00</strong></div>
+    </div>
+    <div class="real-body">
+        <div class="container">
+            <input placeholder="0" id="input-box" disabled/>
+            <div class="calculator">
+                <div id="first-btns">
+                    <button id="percentage" class="action-buttons">%</button>
+                    <button id="ClearAll" class="action-buttons">CE</button>
+                    <button id="Cut" class="action-buttons"><img src="images/x-mark.svg"></button>
+                    <button id="Multiplication" class="action-buttons">&times;</button>
+                </div>
+                <div id="second-btns">
+                    <button id="buttons">7</button>
+                    <button id="buttons">8</button>
+                    <button id="buttons">9</button>
+                    <button id="Division" class="action-buttons">&#247;</button>
+                </div>
+                <div id="third-btns">
+                    <button id="buttons">4</button>
+                    <button id="buttons">5</button>
+                    <button id="buttons">6</button>
+                    <button id="Addition" class="action-buttons">+</button>
+                </div>
+                <div id="fourth-btns">
+                    <button id="buttons">1</button>
+                    <button id="buttons">2</button>
+                    <button id="buttons">3</button>
+                    <button id="Substraction" class="action-buttons">-</button>
+                </div>
+                <div id="fifth-btns">
+                    <button id="buttons">00</button>
+                    <button id="buttons">0</button>
+                    <button id="buttons">.</button>
+                    <button id="Answer" class="getans-button">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="calculator.js"></script>
+</body>
+
+</html>

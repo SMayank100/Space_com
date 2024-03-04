@@ -1,0 +1,416 @@
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-space() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+$background-weather: linear-gradient(135deg, rgba(0, 254, 186, 0.8), rgba(91, 84, 138, 0.8));
+$border: solid white;
+$background-linear: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+$search-box-background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+$hover-box-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+$linear-gradient: linear-gradient(45deg, #ff66b2, #413466);
+$linear-on: linear-gradient(135deg, #ffd700, #c0c0c0);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(images/pexels-philippe-donn.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#appbar {
+    width: 100%;
+    height: 50px;
+    background: $background-linear;
+    border: 3px $border;
+    border-radius: 10px;
+    @include flex-center();
+}
+
+#home {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+        background: #444;
+    }
+
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+
+#timer-stopwatch {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+        background: #444;
+    }
+
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+
+#calculator {
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+        background: #444;
+    }
+
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.96);
+    }
+}
+
+#clock {
+    color: white;
+    right: 10%;
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#date {
+    color: white;
+    right: 70%;
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.real-body {
+    width: 100%;
+    height: calc(100% - 50px);
+    background: transparent;
+    @include flex-center();
+}
+
+.container {
+    width: 90%;
+    max-width: 5000px;
+    background: $background-weather;
+    color: white;
+    border-radius: 20px;
+    padding: 40px 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    .search {
+        width: 100%;
+        @include flex-space();
+    }
+    .search #input-box {
+        border: 0;
+        outline: 0;
+        background: $background-linear;
+        color: white;
+        padding: 10px 25px;
+        height: 60px;
+        border-radius: 30px;
+        flex: 1;
+        margin-right: 16px;
+        font-size: 18px;
+    }
+    .search #search-button {
+        border: none;
+        outline: none;
+        background: $linear-gradient;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        transition: background 0.2s ease;
+        &:active {
+            background: $linear-on;
+        }
+    }
+    #name-city {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .details {
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+        background: $background-linear;
+        font-family: "Poppins", sans-serif;
+        border-radius: 30px;
+        display: flex;
+    }
+    #weather-group {
+        width: 20%;
+        text-align: center;
+    }
+    #temperature {
+        width: 20%;
+        background: $background-linear;
+        justify-self: center;
+        align-self: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    #temp-normal {
+        font-size: 30px;
+        text-align: center;
+    }
+    #other-temp {
+        font-size: 20px;
+        margin-top: 10px;
+        color:#999999;
+    }
+    #humidity {
+        width: 25%;
+        background: $background-linear;
+        justify-self: center;
+        align-self: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    #humidity-percentage {
+        font-size: 30px;
+        text-align: center;
+    }
+    #other-details {
+        font-size: 20px;
+        margin-top: 10px;
+        color:#999999;
+    }
+    #wind {
+        width: 20%;
+        height: 135px;
+        background: $background-linear;
+        justify-self: center;
+        align-self: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    #wind-speed {
+        font-size: 30px;
+        text-align: center;
+    }
+    #other-wind-details {
+        font-size: 20px;
+        margin-top: 10px;
+        color:#999999;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .search {
+        width: 100%;
+        @include flex-space();
+    }
+    .search #input-box {
+        border: 0;
+        outline: 0;
+        background: $background-linear;
+        color: white;
+        padding: 10px 25px;
+        height: 60px;
+        border-radius: 30px;
+        width: 30px;
+        flex: 1;
+        margin-right: 16px;
+        font-size: 18px;
+    }
+    .search #search-button {
+        border: none;
+        outline: none;
+        background: $linear-gradient;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        transition: background 0.2s ease;
+        &:active {
+            background: $linear-on;
+        }
+    }
+    #name-city {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .details {
+        width: 100%;
+        background: $background-linear;
+        font-family: "Poppins", sans-serif;
+        border-radius: 30px;
+        padding: 20px 0 5px 0;
+    }
+    #weather-group {
+        width: 100%;
+        text-align: center;
+    }
+    #temperature {
+        width: 90%;
+        background: $background-linear;
+        justify-self: center;
+        align-self: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    #temp-normal {
+        font-size: 20px;
+        text-align: center;
+    }
+    #other-temp {
+        font-size: 10px;
+        margin-top: 5px;
+        color:#999999;
+    }
+    #humidity {
+        width: 90%;
+        background: $background-linear;
+        justify-self: center;
+        align-self: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    #humidity-percentage {
+        font-size: 20px;
+        text-align: center;
+    }
+    #other-details {
+        font-size: 10px;
+        margin-top: 5px;
+        color:#999999;
+    }
+    #wind {
+        width: 90%;
+        height: 70px;
+        background: $background-linear;
+        justify-self: center;
+        align-self: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    #wind-speed {
+        font-size: 20px;
+        text-align: center;
+    }
+    #other-wind-details {
+        font-size: 10px;
+        margin-top: 5px;
+        color:#999999;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+    * {
+        font-size: 10px;
+    }
+    .container {
+        width: 80%;
+        max-width: 5000px;
+        background: $background-weather;
+        color: white;
+        border-radius: 20px;
+        padding: 40px 35px;
+        font-family: 'Poppins', sans-serif;
+        height: 370px;
+        margin-top: 100px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .details {
+        width: 100%;
+        background: $background-linear;
+        font-family: "Poppins", sans-serif;
+        border-radius: 30px;
+        padding: 10px;
+        height: 170px;
+    }
+    #weather-group {
+        width: 25%;
+        text-align: center;
+    }
+    #temp-normal {
+        font-size: 20px;
+    }
+    #humidity-percentage {
+        font-size: 20px;
+    }
+    #wind-speed {
+        font-size: 20px;
+    }
+    #wind {
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    *{
+        font-size: 10px;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .container {
+        height: 500px;
+    }
+    .details img {
+        width: 50px;
+        height: 50px;
+    }
+    .details {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+    *{
+        font-size: 10px;
+    }
+    .container {
+        margin-top: 15px;
+        padding: 10px 10px;
+    }
+    h1 {
+        margin: 0;
+        font-size: 20px;
+    }
+}

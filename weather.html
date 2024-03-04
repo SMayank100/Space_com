@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/startup.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="styleweather.css" />
+</head>
+
+<body>
+    <div id="appbar">
+        <div id="date"><strong id=date></strong></div>
+        <button id="home">
+            <img src="images/home.png" />
+        </button>
+        <button id="timer-stopwatch">
+            <img src="images/clock.svg" />
+        </button>
+        <button id="calculator">
+            <img src="images/calculator.png" />
+        </button>
+        <div id="clock"><strong id="time">00:00:00</strong></div>
+    </div>
+    <div class="real-body">
+        <div class="container">
+            <div class="search">
+                <input placeholder="Enter City" id="input-box" spellcheck="false" />
+                <button id="search-button">
+                    <img src="images/search(1).svg" />
+                </button>
+            </div>
+            <div class="weather">
+                <h1 id="name-city">Weather for Jamshedpur</h1>
+                <div class="details">
+                    <div id="weather-group">
+                        <img src="images/cloud-only.png" id="weather-icon" />
+                        <h2 id="weather-condition">Clouds</h2>
+                    </div>
+                    <div id="temperature">
+                        <p id="temp-normal">30°C</p>
+                        <div id="other-temp">
+                            <strong>
+                                <p id="temp-max">Max: 33°C</p>
+                                <p id="temp-min">Min: 28°C</p>
+                                <p id="temp-feels">Feels: 29.8°C</p>
+                            </strong>
+                        </div>
+                    </div>
+                    <div id="humidity">
+                        <p id="humidity-percentage">39%</p>
+                        <div id="other-details">
+                            <strong>
+                                <p id="clouds">Clouds: 21</p>
+                                <p id="condition">Condition: Clouds</p>
+                                <p id="pressure">Pressure: 1032 hPa</p>
+                            </strong>
+                        </div>
+                    </div>
+                    <div id="wind">
+                        <p id="wind-speed">3km/h</p>
+                        <div id="other-wind-details">
+                            <strong>
+                                <p id="wind-direction">Direction: North</p>
+                                <p id="wind-degree">Degree: 0°</p>
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="scriptweather.js"></script>
+</body>
+
+</html>

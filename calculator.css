@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: url(images/pexels-philippe-donn.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#appbar {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  border: 3px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home {
+  background: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+#home:hover {
+  background: #444;
+}
+#home:active {
+  transform: scale(0.96);
+}
+
+#timer-stopwatch {
+  background: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+#timer-stopwatch:hover {
+  background: #444;
+}
+#timer-stopwatch:active {
+  transform: scale(0.96);
+}
+
+#weather {
+  background: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+#weather:hover {
+  background: #444;
+}
+#weather:active {
+  transform: scale(0.96);
+}
+
+#clock {
+  color: white;
+  right: 10%;
+  position: absolute;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#date {
+  color: white;
+  right: 70%;
+  position: absolute;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.real-body {
+  width: 100%;
+  height: calc(100% - 50px);
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  border: 3px solid white;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.calculator {
+  width: 100%;
+  height: 100%;
+  font-size: 60px;
+}
+.calculator #first-btns, .calculator #second-btns, .calculator #third-btns, .calculator #fourth-btns, .calculator #fifth-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.calculator #first-btns #buttons, .calculator #second-btns #buttons, .calculator #third-btns #buttons, .calculator #fourth-btns #buttons, .calculator #fifth-btns #buttons {
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  color: white;
+  background: none;
+  transition: all 0.2s ease;
+  border: none;
+  margin: 5px;
+}
+.calculator #first-btns #buttons:hover, .calculator #second-btns #buttons:hover, .calculator #third-btns #buttons:hover, .calculator #fourth-btns #buttons:hover, .calculator #fifth-btns #buttons:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.calculator #first-btns #buttons:active, .calculator #second-btns #buttons:active, .calculator #third-btns #buttons:active, .calculator #fourth-btns #buttons:active, .calculator #fifth-btns #buttons:active {
+  border-radius: 50%;
+}
+.calculator #first-btns .action-buttons, .calculator #second-btns .action-buttons, .calculator #third-btns .action-buttons, .calculator #fourth-btns .action-buttons, .calculator #fifth-btns .action-buttons {
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+  border: none;
+  margin: 5px;
+}
+.calculator #first-btns .action-buttons:hover, .calculator #second-btns .action-buttons:hover, .calculator #third-btns .action-buttons:hover, .calculator #fourth-btns .action-buttons:hover, .calculator #fifth-btns .action-buttons:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.calculator #first-btns .action-buttons:active, .calculator #second-btns .action-buttons:active, .calculator #third-btns .action-buttons:active, .calculator #fourth-btns .action-buttons:active, .calculator #fifth-btns .action-buttons:active {
+  border-radius: 50%;
+}
+.calculator #first-btns .getans-button, .calculator #second-btns .getans-button, .calculator #third-btns .getans-button, .calculator #fourth-btns .getans-button, .calculator #fifth-btns .getans-button {
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  color: white;
+  background: rgba(255, 123, 0, 0.3);
+  transition: all 0.2s ease;
+  border: none;
+  margin: 5px;
+}
+.calculator #first-btns .getans-button:hover, .calculator #second-btns .getans-button:hover, .calculator #third-btns .getans-button:hover, .calculator #fourth-btns .getans-button:hover, .calculator #fifth-btns .getans-button:hover {
+  background: rgba(255, 123, 0, 0.5);
+}
+.calculator #first-btns .getans-button:active, .calculator #second-btns .getans-button:active, .calculator #third-btns .getans-button:active, .calculator #fourth-btns .getans-button:active, .calculator #fifth-btns .getans-button:active {
+  border-radius: 50%;
+}
+
+.container input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 50px;
+  padding: 30px;
+  border-radius: 30px;
+  font-size: 30px;
+  color: white;
+  text-align: right;
+}
+.container input::-moz-placeholder {
+  align-self: right;
+  color: white;
+}
+.container input::placeholder {
+  align-self: right;
+  color: white;
+}/*# sourceMappingURL=calculator.css.map */
